@@ -15,6 +15,8 @@
 		431E16FA2B374AA9000F132E /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E16F92B374AA9000F132E /* ProductModel.swift */; };
 		431E16FC2B374BF0000F132E /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E16FB2B374BF0000F132E /* ApiManager.swift */; };
 		431E16FE2B375D63000F132E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E16FD2B375D63000F132E /* Constant.swift */; };
+		431E17002B37674D000F132E /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E16FF2B37674D000F132E /* ProductListViewController.swift */; };
+		431E17022B376931000F132E /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E17012B376931000F132E /* ProductViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		431E16F92B374AA9000F132E /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		431E16FB2B374BF0000F132E /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		431E16FD2B375D63000F132E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		431E16FF2B37674D000F132E /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		431E17012B376931000F132E /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,7 @@
 		431E16F62B3749C7000F132E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				431E17012B376931000F132E /* ProductViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 		431E16F72B3749CA000F132E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				431E16FF2B37674D000F132E /* ProductListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -232,10 +238,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				431E17022B376931000F132E /* ProductViewModel.swift in Sources */,
 				431E16FC2B374BF0000F132E /* ApiManager.swift in Sources */,
 				431E16DB2B37492E000F132E /* AppDelegate.swift in Sources */,
 				431E16FE2B375D63000F132E /* Constant.swift in Sources */,
 				431E16FA2B374AA9000F132E /* ProductModel.swift in Sources */,
+				431E17002B37674D000F132E /* ProductListViewController.swift in Sources */,
 				431E16DD2B37492E000F132E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
