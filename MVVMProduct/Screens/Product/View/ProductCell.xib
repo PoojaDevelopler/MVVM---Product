@@ -114,6 +114,15 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="productCategory" destination="Pqk-hM-KiW" id="GlN-Nq-DDs"/>
+                <outlet property="productDescription" destination="Pqk-hM-KiW" id="qa9-jP-4h1"/>
+                <outlet property="productImage" destination="0Lc-kB-l9s" id="LRu-Jj-HKL"/>
+                <outlet property="productPrice" destination="Jjz-Wt-uE9" id="Jf7-Fa-8fK"/>
+                <outlet property="productRateButton" destination="BbO-ay-6DL" id="ZYA-Yu-e9Z"/>
+                <outlet property="productTitle" destination="LFU-Kw-KrG" id="zmq-f9-5nb"/>
+                <outlet property="productViewBackGround" destination="dFm-He-JcS" id="Aax-ot-U7O"/>
+            </connections>
             <point key="canvasLocation" x="184.73282442748092" y="102.8169014084507"/>
         </tableViewCell>
     </objects>

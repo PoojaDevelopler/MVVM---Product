@@ -9,8 +9,15 @@ import UIKit
 
 class ProductListViewController: UIViewController {
 
-    private var viewModel = ProductViewModel()
+    @IBOutlet weak var productTV:UITableView!{
+        didSet{
+            productTV.dataSource = self
+            productTV.delegate = self
+        }
+    }
     
+    private var viewModel = ProductViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configuration()
@@ -21,6 +28,7 @@ class ProductListViewController: UIViewController {
 
 extension ProductListViewController{
     func configuration(){
+        productTV.register(UINib(nibName: "ProductCell", bundle: nil), forCellReuseIdentifier: "ProductCell")
         self.initViewModel()
         self.observeEvent()
     }
@@ -37,17 +45,33 @@ extension ProductListViewController{
             
             switch event {
             case .loading:break //can show indicator
-            case .stopLoading:break //can  hide Indicator 
+            case .stopLoading:break //can  hide Indicator
                 
             case .dataLoading:
-                print(self.viewModel.products)
+                DispatchQueue.main.async{
+                    //UI update
+                    self.productTV.reloadData()
+                }
                 
             case .error(let error):
-                print(error)
+                print(error ?? "...")
                 
-            default:
-                print("")
             }
         }
     }
+}
+
+extension ProductListViewController:UITableViewDelegate , UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.products.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell") as! ProductCell
+        cell.product = self.viewModel.products[indexPath.row]
+        return cell
+    }
+    
+    
+    
 }

@@ -19,6 +19,8 @@
 		431E17022B376931000F132E /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E17012B376931000F132E /* ProductViewModel.swift */; };
 		431E17052B377249000F132E /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E17032B377249000F132E /* ProductCell.swift */; };
 		431E17062B377249000F132E /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431E17042B377249000F132E /* ProductCell.xib */; };
+		431E17092B39F9AA000F132E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 431E17082B39F9AA000F132E /* Kingfisher */; };
+		431E170B2B39F9CD000F132E /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E170A2B39F9CD000F132E /* ImageViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,7 @@
 		431E17012B376931000F132E /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		431E17032B377249000F132E /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		431E17042B377249000F132E /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		431E170A2B39F9CD000F132E /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				431E17092B39F9AA000F132E /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +128,7 @@
 		431E16F32B37494F000F132E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				431E170A2B39F9CD000F132E /* ImageViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -189,6 +194,9 @@
 			dependencies = (
 			);
 			name = MVVMProduct;
+			packageProductDependencies = (
+				431E17082B39F9AA000F132E /* Kingfisher */,
+			);
 			productName = MVVMProduct;
 			productReference = 431E16D72B37492E000F132E /* MVVMProduct.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +225,9 @@
 				Base,
 			);
 			mainGroup = 431E16CE2B37492E000F132E;
+			packageReferences = (
+				431E17072B39F9AA000F132E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 431E16D82B37492E000F132E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -249,6 +260,7 @@
 				431E16FC2B374BF0000F132E /* ApiManager.swift in Sources */,
 				431E16DB2B37492E000F132E /* AppDelegate.swift in Sources */,
 				431E16FE2B375D63000F132E /* Constant.swift in Sources */,
+				431E170B2B39F9CD000F132E /* ImageViewExtension.swift in Sources */,
 				431E16FA2B374AA9000F132E /* ProductModel.swift in Sources */,
 				431E17052B377249000F132E /* ProductCell.swift in Sources */,
 				431E17002B37674D000F132E /* ProductListViewController.swift in Sources */,
@@ -470,6 +482,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		431E17072B39F9AA000F132E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		431E17082B39F9AA000F132E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 431E17072B39F9AA000F132E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 431E16CF2B37492E000F132E /* Project object */;
 }
